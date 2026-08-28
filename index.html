@@ -1,0 +1,2689 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Portfolio | ชลิตา ศรีบรรเทา | โรงเรียนมหิดลวิทยานุสรณ์</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            thai: ['Noto Sans Thai', 'sans-serif']
+          },
+          colors: {
+            primary: '#1976D2',
+            darkblue: '#12345B',
+            sky: '#4FC3F7',
+            cyan: '#00BCD4',
+            lightblue: '#EAF7FF'
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(25,118,210,0.12)',
+            blue: '0 15px 40px rgba(25,118,210,0.18)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+
+    /* =========================================
+       GLOBAL
+    ========================================= */
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Noto Sans Thai', sans-serif;
+      background: #f5fbff;
+      color: #12345B;
+      overflow-x: hidden;
+    }
+
+    section {
+      scroll-margin-top: 80px;
+    }
+
+    /* =========================================
+       BACKGROUND
+    ========================================= */
+
+    .medical-bg {
+      background:
+        radial-gradient(
+          circle at 10% 20%,
+          rgba(79,195,247,0.18),
+          transparent 25%
+        ),
+        radial-gradient(
+          circle at 90% 10%,
+          rgba(25,118,210,0.15),
+          transparent 25%
+        ),
+        linear-gradient(
+          180deg,
+          #ffffff 0%,
+          #eef9ff 100%
+        );
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(
+          rgba(25,118,210,0.05) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(25,118,210,0.05) 1px,
+          transparent 1px
+        );
+
+      background-size: 35px 35px;
+    }
+
+    /* =========================================
+       STICKERS
+    ========================================= */
+
+    .sticker {
+      position: absolute;
+
+      width: 60px;
+      height: 60px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: rgba(255,255,255,0.95);
+
+      border: 2px solid #d8f1ff;
+
+      border-radius: 20px;
+
+      font-size: 28px;
+
+      box-shadow:
+        0 10px 25px rgba(25,118,210,0.15);
+
+      animation: floating 4s ease-in-out infinite;
+
+      z-index: 2;
+    }
+
+    .sticker-1 {
+      top: 18%;
+      left: 4%;
+    }
+
+    .sticker-2 {
+      top: 27%;
+      right: 5%;
+      animation-delay: 1s;
+    }
+
+    .sticker-3 {
+      bottom: 16%;
+      left: 7%;
+      animation-delay: 2s;
+    }
+
+    .sticker-4 {
+      bottom: 10%;
+      right: 7%;
+      animation-delay: 0.5s;
+    }
+
+    .sticker-5 {
+      top: 12%;
+      right: 25%;
+      animation-delay: 1.5s;
+    }
+
+    @keyframes floating {
+
+      0%, 100% {
+        transform: translateY(0) rotate(-4deg);
+      }
+
+      50% {
+        transform: translateY(-12px) rotate(4deg);
+      }
+
+    }
+
+    /* =========================================
+       SECTION TITLE
+    ========================================= */
+
+    .section-title {
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: "";
+
+      position: absolute;
+
+      width: 60%;
+      height: 5px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #1976D2,
+          #4FC3F7
+        );
+
+      border-radius: 20px;
+
+      left: 0;
+      bottom: -12px;
+    }
+
+    /* =========================================
+       PROJECT CARD
+    ========================================= */
+
+    .project-card {
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+
+      box-shadow:
+        0 18px 40px rgba(25,118,210,0.18);
+    }
+
+    /* =========================================
+       SKILL BAR
+    ========================================= */
+
+    .skill-bar {
+      transition: width 1.2s ease;
+    }
+
+    /* =========================================
+       MOBILE
+    ========================================= */
+
+    @media (max-width: 640px) {
+
+      .sticker {
+        width: 48px;
+        height: 48px;
+        font-size: 22px;
+      }
+
+      .sticker-1 {
+        left: 2%;
+      }
+
+      .sticker-2 {
+        right: 2%;
+      }
+
+      .sticker-3,
+      .sticker-4,
+      .sticker-5 {
+        display: none;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+<!-- =====================================================
+     NAVBAR
+====================================================== -->
+
+<header class="fixed top-0 left-0 right-0 z-50">
+
+  <nav
+    class="bg-white/95 backdrop-blur-md border-b border-blue-100 shadow-sm">
+
+    <div class="max-w-7xl mx-auto px-5">
+
+      <div class="h-20 flex items-center justify-between">
+
+        <!-- LOGO -->
+
+        <a
+          href="#home"
+          class="flex items-center gap-3">
+
+          <div
+            class="w-12 h-12 rounded-2xl
+                   bg-gradient-to-br from-blue-600 to-cyan-400
+                   flex items-center justify-center
+                   shadow-md">
+
+            <span class="text-2xl">
+              🩺
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <h1
+              class="font-extrabold text-lg text-[#12345B]">
+
+              ชลิตา ศรีบรรเทา
+
+            </h1>
+
+            <p
+              class="text-xs text-blue-600 font-medium">
+
+              โรงเรียนมหิดลวิทยานุสรณ์
+
+            </p>
+
+          </div>
+
+        </a>
+
+
+        <!-- DESKTOP MENU -->
+
+        <div
+          class="hidden md:flex items-center gap-7">
+
+          <a
+            href="#home"
+            class="font-semibold text-[#12345B]
+                   hover:text-blue-600 transition">
+
+            หน้าแรก
+
+          </a>
+
+          <a
+            href="#about"
+            class="font-semibold text-[#12345B]
+                   hover:text-blue-600 transition">
+
+            เกี่ยวกับฉัน
+
+          </a>
+
+          <a
+            href="#education"
+            class="font-semibold text-[#12345B]
+                   hover:text-blue-600 transition">
+
+            เป้าหมาย
+
+          </a>
+
+          <a
+            href="#skills"
+            class="font-semibold text-[#12345B]
+                   hover:text-blue-600 transition">
+
+            ทักษะ
+
+          </a>
+
+          <a
+            href="#projects"
+            class="font-semibold text-[#12345B]
+                   hover:text-blue-600 transition">
+
+            ผลงาน
+
+          </a>
+
+          <a
+            href="#contact"
+            class="px-5 py-2.5
+                   rounded-full
+                   bg-blue-600
+                   text-white
+                   font-bold
+                   hover:bg-blue-700
+                   transition
+                   shadow-md">
+
+            ติดต่อ
+
+          </a>
+
+        </div>
+
+
+        <!-- MOBILE BUTTON -->
+
+        <button
+          id="menuBtn"
+          class="md:hidden
+                 text-2xl
+                 text-[#12345B]">
+
+          ☰
+
+        </button>
+
+      </div>
+
+
+      <!-- MOBILE MENU -->
+
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden pb-5">
+
+        <div class="flex flex-col gap-2">
+
+          <a
+            href="#home"
+            class="mobile-link
+                   px-4 py-3
+                   rounded-xl
+                   hover:bg-blue-50
+                   font-medium
+                   text-[#12345B]">
+
+            🏠 หน้าแรก
+
+          </a>
+
+          <a
+            href="#about"
+            class="mobile-link
+                   px-4 py-3
+                   rounded-xl
+                   hover:bg-blue-50
+                   font-medium
+                   text-[#12345B]">
+
+            👩🏻‍⚕️ เกี่ยวกับฉัน
+
+          </a>
+
+          <a
+            href="#education"
+            class="mobile-link
+                   px-4 py-3
+                   rounded-xl
+                   hover:bg-blue-50
+                   font-medium
+                   text-[#12345B]">
+
+            🏫 เป้าหมาย
+
+          </a>
+
+          <a
+            href="#skills"
+            class="mobile-link
+                   px-4 py-3
+                   rounded-xl
+                   hover:bg-blue-50
+                   font-medium
+                   text-[#12345B]">
+
+            🧠 ทักษะ
+
+          </a>
+
+          <a
+            href="#projects"
+            class="mobile-link
+                   px-4 py-3
+                   rounded-xl
+                   hover:bg-blue-50
+                   font-medium
+                   text-[#12345B]">
+
+            🧪 ผลงาน
+
+          </a>
+
+          <a
+            href="#contact"
+            class="mobile-link
+                   px-4 py-3
+                   rounded-xl
+                   bg-blue-600
+                   text-white
+                   text-center
+                   font-bold">
+
+            💌 ติดต่อ
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section
+  id="home"
+  class="min-h-screen
+         medical-bg
+         grid-bg
+         relative
+         flex items-center
+         pt-24
+         overflow-hidden">
+
+
+  <!-- STICKERS -->
+
+  <div class="sticker sticker-1">
+    🧬
+  </div>
+
+  <div class="sticker sticker-2">
+    🩺
+  </div>
+
+  <div class="sticker sticker-3">
+    💙
+  </div>
+
+  <div class="sticker sticker-4">
+    🧪
+  </div>
+
+  <div class="sticker sticker-5">
+    🫀
+  </div>
+
+
+  <div
+    class="max-w-7xl
+           mx-auto
+           px-5
+           py-20
+           w-full">
+
+    <div
+      class="grid
+             lg:grid-cols-2
+             gap-12
+             items-center">
+
+
+      <!-- HERO TEXT -->
+
+      <div class="relative z-10">
+
+
+        <!-- SCHOOL -->
+
+        <div
+          class="inline-flex
+                 items-center
+                 gap-3
+                 px-5
+                 py-3
+                 bg-blue-50
+                 border-2
+                 border-blue-200
+                 rounded-2xl
+                 shadow-sm
+                 mb-6">
+
+          <span class="text-2xl">
+            🏫
+          </span>
+
+          <div>
+
+            <p
+              class="text-xs
+                     text-blue-600
+                     font-semibold">
+
+              เป้าหมายการศึกษาต่อ
+
+            </p>
+
+            <p
+              class="text-base
+                     sm:text-lg
+                     font-extrabold
+                     text-[#12345B]">
+
+              โรงเรียนมหิดลวิทยานุสรณ์
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- SMALL LABEL -->
+
+        <div
+          class="inline-flex
+                 items-center
+                 gap-2
+                 px-4 py-2
+                 bg-white
+                 border
+                 border-blue-100
+                 rounded-full
+                 shadow-sm
+                 mb-6">
+
+          <span
+            class="w-2.5 h-2.5
+                   bg-cyan-400
+                   rounded-full">
+          </span>
+
+          <span
+            class="text-sm
+                   font-semibold
+                   text-blue-700">
+
+            My Medical & Science Portfolio
+
+          </span>
+
+        </div>
+
+
+        <!-- NAME -->
+
+        <h2
+          class="text-4xl
+                 sm:text-5xl
+                 lg:text-6xl
+                 font-extrabold
+                 leading-tight
+                 text-[#12345B]">
+
+          สวัสดีค่ะ 👋
+
+          <br>
+
+          <span
+            class="bg-gradient-to-r
+                   from-blue-700
+                   via-blue-500
+                   to-cyan-400
+                   bg-clip-text
+                   text-transparent">
+
+            ชลิตา ศรีบรรเทา
+
+          </span>
+
+        </h2>
+
+
+        <!-- TAGLINE -->
+
+        <p
+          class="mt-6
+                 text-xl
+                 sm:text-2xl
+                 font-bold
+                 text-[#1E5A91]">
+
+          นักเรียนผู้มีความฝันด้านแพทยศาสตร์ 🩺
+
+        </p>
+
+
+        <!-- DESCRIPTION -->
+
+        <p
+          class="mt-5
+                 text-gray-700
+                 leading-8
+                 max-w-xl">
+
+          Portfolio นี้จัดทำขึ้นเพื่อรวบรวมประวัติส่วนตัว
+          ความสามารถ กิจกรรม และผลงานที่สะท้อนถึงความสนใจ
+          ทางด้านวิทยาศาสตร์ สุขภาพ และการแพทย์
+          เพื่อเตรียมความพร้อมสู่การศึกษาต่อ
+          ณ โรงเรียนมหิดลวิทยานุสรณ์
+
+        </p>
+
+
+        <!-- BUTTONS -->
+
+        <div
+          class="mt-8
+                 flex
+                 flex-wrap
+                 gap-4">
+
+          <a
+            href="#projects"
+            class="px-7 py-3.5
+                   rounded-full
+                   bg-blue-600
+                   text-white
+                   font-bold
+                   shadow-lg
+                   hover:bg-blue-700
+                   hover:-translate-y-1
+                   transition">
+
+            🧪 ดูผลงานของฉัน
+
+          </a>
+
+
+          <a
+            href="#about"
+            class="px-7 py-3.5
+                   rounded-full
+                   bg-white
+                   border-2
+                   border-blue-200
+                   text-[#12345B]
+                   font-bold
+                   hover:bg-blue-50
+                   transition">
+
+            👩🏻‍⚕️ รู้จักฉัน
+
+          </a>
+
+        </div>
+
+
+        <!-- STATS -->
+
+        <div
+          class="grid
+                 grid-cols-3
+                 gap-4
+                 mt-10
+                 max-w-lg">
+
+
+          <div
+            class="bg-white
+                   rounded-2xl
+                   p-4
+                   text-center
+                   shadow-soft
+                   border
+                   border-blue-50">
+
+            <div
+              class="text-2xl
+                     font-extrabold
+                     text-blue-600">
+
+              03+
+
+            </div>
+
+            <div
+              class="text-xs
+                     text-gray-600
+                     mt-1">
+
+              ปีแห่งการเรียนรู้
+
+            </div>
+
+          </div>
+
+
+          <div
+            class="bg-white
+                   rounded-2xl
+                   p-4
+                   text-center
+                   shadow-soft
+                   border
+                   border-blue-50">
+
+            <div
+              class="text-2xl
+                     font-extrabold
+                     text-blue-600">
+
+              10+
+
+            </div>
+
+            <div
+              class="text-xs
+                     text-gray-600
+                     mt-1">
+
+              ผลงาน/กิจกรรม
+
+            </div>
+
+          </div>
+
+
+          <div
+            class="bg-white
+                   rounded-2xl
+                   p-4
+                   text-center
+                   shadow-soft
+                   border
+                   border-blue-50">
+
+            <div
+              class="text-2xl
+                     font-extrabold
+                     text-blue-600">
+
+              ∞
+
+            </div>
+
+            <div
+              class="text-xs
+                     text-gray-600
+                     mt-1">
+
+              ความตั้งใจ
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- PROFILE -->
+
+      <div
+        class="relative
+               flex
+               justify-center
+               z-10">
+
+        <div
+          class="absolute
+                 w-80 h-80
+                 sm:w-96 sm:h-96
+                 rounded-full
+                 bg-blue-200/50
+                 blur-3xl">
+        </div>
+
+
+        <div
+          class="relative
+                 w-72 h-80
+                 sm:w-96 sm:h-[450px]
+                 bg-white
+                 rounded-[40px]
+                 p-4
+                 shadow-blue
+                 border
+                 border-blue-100">
+
+
+          <!-- เปลี่ยนรูปตรงนี้ -->
+
+          <img
+            src="https://placehold.co/600x750/EAF7FF/1976D2?text=Your+Photo"
+            alt="รูปโปรไฟล์ ชลิตา ศรีบรรเทา"
+            class="w-full
+                   h-full
+                   object-cover
+                   rounded-[30px]">
+
+
+          <!-- LABEL -->
+
+          <div
+            class="absolute
+                   -bottom-5
+                   -left-5
+                   bg-white
+                   px-5
+                   py-4
+                   rounded-2xl
+                   shadow-lg
+                   border
+                   border-blue-100">
+
+            <p
+              class="text-xs
+                     text-gray-500">
+
+              My Dream
+
+            </p>
+
+            <p
+              class="font-bold
+                     text-[#12345B]">
+
+              🩺 Medical Student
+
+            </p>
+
+          </div>
+
+
+          <!-- STICKER -->
+
+          <div
+            class="absolute
+                   -top-5
+                   -right-5
+                   bg-cyan-400
+                   w-16 h-16
+                   rounded-2xl
+                   flex
+                   items-center
+                   justify-center
+                   shadow-lg
+                   rotate-6">
+
+            <span class="text-3xl">
+              🧬
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT ME
+====================================================== -->
+
+<section
+  id="about"
+  class="py-24
+         bg-white">
+
+
+  <div
+    class="max-w-6xl
+           mx-auto
+           px-5">
+
+
+    <!-- TITLE -->
+
+    <div
+      class="text-center
+             mb-16">
+
+      <span
+        class="text-blue-600
+               font-bold">
+
+        ABOUT ME
+
+      </span>
+
+      <h2
+        class="section-title
+               text-3xl
+               sm:text-4xl
+               font-extrabold
+               text-[#12345B]
+               mt-3">
+
+        เกี่ยวกับฉัน
+
+      </h2>
+
+    </div>
+
+
+    <div
+      class="grid
+             md:grid-cols-2
+             gap-12
+             items-center">
+
+
+      <!-- IMAGE -->
+
+      <div class="relative">
+
+        <div
+          class="absolute
+                 -top-5
+                 -left-5
+                 text-4xl">
+
+          💙
+
+        </div>
+
+        <div
+          class="absolute
+                 -bottom-5
+                 -right-5
+                 text-4xl">
+
+          🔬
+
+        </div>
+
+
+        <img
+          src="https://placehold.co/700x500/F0FAFF/1976D2?text=Science+%26+Medical"
+          alt="Science and Medical"
+          class="rounded-[35px]
+                 shadow-blue
+                 w-full">
+
+      </div>
+
+
+      <!-- TEXT -->
+
+      <div>
+
+        <h3
+          class="text-2xl
+                 font-bold
+                 text-[#12345B]">
+
+          ฉันคือ ชลิตา ศรีบรรเทา 👩🏻‍🔬
+
+        </h3>
+
+
+        <p
+          class="mt-5
+                 text-gray-700
+                 leading-8">
+
+          ฉันเป็นนักเรียนชั้นมัธยมศึกษาปีที่ 3
+          ที่มีความสนใจด้านวิทยาศาสตร์และการแพทย์
+          ชอบเรียนรู้สิ่งใหม่ ๆ และสนุกกับการทดลอง
+          การค้นคว้า และการแก้ไขปัญหาอย่างเป็นระบบ
+
+        </p>
+
+
+        <p
+          class="mt-4
+                 text-gray-700
+                 leading-8">
+
+          ฉันมีเป้าหมายในการศึกษาต่อที่
+          <strong class="text-blue-700">
+            โรงเรียนมหิดลวิทยานุสรณ์
+          </strong>
+          เพื่อพัฒนาความรู้ด้านวิทยาศาสตร์ คณิตศาสตร์
+          และทักษะการคิดวิเคราะห์ให้มากยิ่งขึ้น
+
+        </p>
+
+
+        <div
+          class="mt-7
+                 grid
+                 grid-cols-2
+                 gap-4">
+
+
+          <div
+            class="p-4
+                   rounded-2xl
+                   bg-blue-50
+                   border
+                   border-blue-100">
+
+            <span class="text-2xl">
+              🔬
+            </span>
+
+            <p
+              class="font-bold
+                     text-[#12345B]
+                     mt-2">
+
+              Science
+
+            </p>
+
+            <p
+              class="text-sm
+                     text-gray-600">
+
+              สนใจการทดลองและการค้นคว้า
+
+            </p>
+
+          </div>
+
+
+          <div
+            class="p-4
+                   rounded-2xl
+                   bg-cyan-50
+                   border
+                   border-cyan-100">
+
+            <span class="text-2xl">
+              🩺
+            </span>
+
+            <p
+              class="font-bold
+                     text-[#12345B]
+                     mt-2">
+
+              Medical
+
+            </p>
+
+            <p
+              class="text-sm
+                     text-gray-600">
+
+              สนใจด้านสุขภาพและการแพทย์
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     EDUCATION GOAL
+====================================================== -->
+
+<section
+  id="education"
+  class="py-24
+         medical-bg">
+
+
+  <div
+    class="max-w-5xl
+           mx-auto
+           px-5">
+
+
+    <div
+      class="bg-white
+             rounded-[35px]
+             p-8
+             sm:p-12
+             shadow-blue
+             border
+             border-blue-100
+             relative
+             overflow-hidden">
+
+
+      <!-- DECORATION -->
+
+      <div
+        class="absolute
+               top-5
+               right-5
+               text-4xl">
+
+        🏫
+
+      </div>
+
+      <div
+        class="absolute
+               bottom-5
+               left-5
+               text-3xl">
+
+        🧬
+
+      </div>
+
+
+      <div class="text-center">
+
+
+        <span
+          class="text-blue-600
+                 font-bold">
+
+          MY DREAM SCHOOL
+
+        </span>
+
+
+        <h2
+          class="text-3xl
+                 sm:text-4xl
+                 font-extrabold
+                 text-[#12345B]
+                 mt-3">
+
+          โรงเรียนมหิดลวิทยานุสรณ์
+
+        </h2>
+
+
+        <div
+          class="w-20
+                 h-1.5
+                 bg-gradient-to-r
+                 from-blue-600
+                 to-cyan-400
+                 rounded-full
+                 mx-auto
+                 mt-5">
+        </div>
+
+
+        <p
+          class="max-w-3xl
+                 mx-auto
+                 mt-7
+                 text-gray-700
+                 leading-8">
+
+          โรงเรียนมหิดลวิทยานุสรณ์เป็นเป้าหมายสำคัญ
+          ในการศึกษาต่อของฉัน เพราะฉันต้องการพัฒนาศักยภาพ
+          ทางด้านวิทยาศาสตร์ คณิตศาสตร์ และเทคโนโลยี
+          พร้อมเรียนรู้ผ่านการทดลองและการคิดวิเคราะห์
+          เพื่อนำไปต่อยอดสู่เป้าหมายในอนาคต
+
+        </p>
+
+
+        <!-- GOALS -->
+
+        <div
+          class="grid
+                 sm:grid-cols-3
+                 gap-5
+                 mt-10">
+
+
+          <div
+            class="bg-blue-50
+                   rounded-2xl
+                   p-6
+                   border
+                   border-blue-100">
+
+            <div class="text-4xl">
+              🔬
+            </div>
+
+            <h3
+              class="font-bold
+                     text-[#12345B]
+                     mt-3">
+
+              วิทยาศาสตร์
+
+            </h3>
+
+            <p
+              class="text-sm
+                     text-gray-600
+                     mt-2">
+
+              พัฒนาความรู้และทักษะการทดลอง
+
+            </p>
+
+          </div>
+
+
+          <div
+            class="bg-cyan-50
+                   rounded-2xl
+                   p-6
+                   border
+                   border-cyan-100">
+
+            <div class="text-4xl">
+              🧠
+            </div>
+
+            <h3
+              class="font-bold
+                     text-[#12345B]
+                     mt-3">
+
+              การคิดวิเคราะห์
+
+            </h3>
+
+            <p
+              class="text-sm
+                     text-gray-600
+                     mt-2">
+
+              ฝึกคิดอย่างเป็นระบบและแก้ปัญหา
+
+            </p>
+
+          </div>
+
+
+          <div
+            class="bg-blue-50
+                   rounded-2xl
+                   p-6
+                   border
+                   border-blue-100">
+
+            <div class="text-4xl">
+              🩺
+            </div>
+
+            <h3
+              class="font-bold
+                     text-[#12345B]
+                     mt-3">
+
+              เป้าหมายแพทยศาสตร์
+
+            </h3>
+
+            <p
+              class="text-sm
+                     text-gray-600
+                     mt-2">
+
+              เตรียมตัวสู่ความฝันในอนาคต
+
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     SKILLS
+====================================================== -->
+
+<section
+  id="skills"
+  class="py-24
+         bg-white">
+
+
+  <div
+    class="max-w-6xl
+           mx-auto
+           px-5">
+
+
+    <div
+      class="text-center
+             mb-16">
+
+      <span
+        class="text-blue-600
+               font-bold">
+
+        MY SKILLS
+
+      </span>
+
+      <h2
+        class="section-title
+               text-3xl
+               sm:text-4xl
+               font-extrabold
+               text-[#12345B]
+               mt-3">
+
+        ทักษะและความสามารถ
+
+      </h2>
+
+    </div>
+
+
+    <div
+      class="grid
+             md:grid-cols-2
+             gap-7">
+
+
+      <!-- SKILL -->
+
+      <div
+        class="bg-blue-50
+               rounded-3xl
+               p-7
+               border
+               border-blue-100">
+
+        <div
+          class="flex
+                 justify-between
+                 mb-3">
+
+          <span
+            class="font-bold
+                   text-[#12345B]">
+
+            🧮 คณิตศาสตร์
+
+          </span>
+
+          <span
+            class="font-bold
+                   text-blue-600">
+
+            85%
+
+          </span>
+
+        </div>
+
+        <div
+          class="h-3
+                 bg-blue-100
+                 rounded-full
+                 overflow-hidden">
+
+          <div
+            class="skill-bar
+                   h-full
+                   bg-gradient-to-r
+                   from-blue-600
+                   to-cyan-400
+                   rounded-full"
+            style="width:85%">
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="bg-cyan-50
+               rounded-3xl
+               p-7
+               border
+               border-cyan-100">
+
+        <div
+          class="flex
+                 justify-between
+                 mb-3">
+
+          <span
+            class="font-bold
+                   text-[#12345B]">
+
+            🔬 วิทยาศาสตร์
+
+          </span>
+
+          <span
+            class="font-bold
+                   text-blue-600">
+
+            90%
+
+          </span>
+
+        </div>
+
+        <div
+          class="h-3
+                 bg-cyan-100
+                 rounded-full
+                 overflow-hidden">
+
+          <div
+            class="skill-bar
+                   h-full
+                   bg-gradient-to-r
+                   from-blue-600
+                   to-cyan-400
+                   rounded-full"
+            style="width:90%">
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="bg-blue-50
+               rounded-3xl
+               p-7
+               border
+               border-blue-100">
+
+        <div
+          class="flex
+                 justify-between
+                 mb-3">
+
+          <span
+            class="font-bold
+                   text-[#12345B]">
+
+            💡 Problem Solving
+
+          </span>
+
+          <span
+            class="font-bold
+                   text-blue-600">
+
+            88%
+
+          </span>
+
+        </div>
+
+        <div
+          class="h-3
+                 bg-blue-100
+                 rounded-full
+                 overflow-hidden">
+
+          <div
+            class="skill-bar
+                   h-full
+                   bg-gradient-to-r
+                   from-blue-600
+                   to-cyan-400
+                   rounded-full"
+            style="width:88%">
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="bg-cyan-50
+               rounded-3xl
+               p-7
+               border
+               border-cyan-100">
+
+        <div
+          class="flex
+                 justify-between
+                 mb-3">
+
+          <span
+            class="font-bold
+                   text-[#12345B]">
+
+            🤝 Teamwork
+
+          </span>
+
+          <span
+            class="font-bold
+                   text-blue-600">
+
+            92%
+
+          </span>
+
+        </div>
+
+        <div
+          class="h-3
+                 bg-cyan-100
+                 rounded-full
+                 overflow-hidden">
+
+          <div
+            class="skill-bar
+                   h-full
+                   bg-gradient-to-r
+                   from-blue-600
+                   to-cyan-400
+                   rounded-full"
+            style="width:92%">
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- TAGS -->
+
+    <div
+      class="mt-10
+             flex
+             flex-wrap
+             justify-center
+             gap-3">
+
+
+      <span
+        class="px-5 py-2.5
+               bg-blue-50
+               rounded-full
+               border
+               border-blue-100
+               text-[#12345B]
+               font-medium">
+
+        🧪 STEM
+
+      </span>
+
+
+      <span
+        class="px-5 py-2.5
+               bg-cyan-50
+               rounded-full
+               border
+               border-cyan-100
+               text-[#12345B]
+               font-medium">
+
+        🔬 Science
+
+      </span>
+
+
+      <span
+        class="px-5 py-2.5
+               bg-blue-50
+               rounded-full
+               border
+               border-blue-100
+               text-[#12345B]
+               font-medium">
+
+        🧠 Critical Thinking
+
+      </span>
+
+
+      <span
+        class="px-5 py-2.5
+               bg-cyan-50
+               rounded-full
+               border
+               border-cyan-100
+               text-[#12345B]
+               font-medium">
+
+        🎤 Presentation
+
+      </span>
+
+
+      <span
+        class="px-5 py-2.5
+               bg-blue-50
+               rounded-full
+               border
+               border-blue-100
+               text-[#12345B]
+               font-medium">
+
+        💻 Computer
+
+      </span>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROJECTS
+====================================================== -->
+
+<section
+  id="projects"
+  class="py-24
+         medical-bg">
+
+
+  <div
+    class="max-w-7xl
+           mx-auto
+           px-5">
+
+
+    <div
+      class="text-center
+             mb-16">
+
+      <span
+        class="text-blue-600
+               font-bold">
+
+        MY PORTFOLIO
+
+      </span>
+
+      <h2
+        class="section-title
+               text-3xl
+               sm:text-4xl
+               font-extrabold
+               text-[#12345B]
+               mt-3">
+
+        ผลงานและกิจกรรม
+
+      </h2>
+
+      <p
+        class="text-gray-600
+               mt-7">
+
+        ผลงานที่สะท้อนความสนใจ
+        ด้านวิทยาศาสตร์ สุขภาพ และการเรียนรู้
+
+      </p>
+
+    </div>
+
+
+    <div
+      class="grid
+             sm:grid-cols-2
+             lg:grid-cols-3
+             gap-7">
+
+
+      <!-- PROJECT 1 -->
+
+      <article
+        class="project-card
+               bg-white
+               rounded-3xl
+               overflow-hidden
+               border
+               border-blue-100
+               shadow-soft">
+
+        <img
+          src="https://placehold.co/600x400/EAF7FF/1976D2?text=STEM+Project"
+          alt="STEM Project"
+          class="w-full
+                 h-52
+                 object-cover">
+
+        <div class="p-6">
+
+          <span
+            class="text-sm
+                   font-bold
+                   text-blue-600">
+
+            🧪 PROJECT 01
+
+          </span>
+
+          <h3
+            class="text-xl
+                   font-bold
+                   text-[#12345B]
+                   mt-2">
+
+            โครงงาน STEM
+
+          </h3>
+
+          <p
+            class="text-gray-600
+                   mt-3
+                   text-sm
+                   leading-7">
+
+            ศึกษาและทดลองการแก้ไขปัญหา
+            ด้วยกระบวนการทางวิทยาศาสตร์
+
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROJECT 2 -->
+
+      <article
+        class="project-card
+               bg-white
+               rounded-3xl
+               overflow-hidden
+               border
+               border-blue-100
+               shadow-soft">
+
+        <img
+          src="https://placehold.co/600x400/F0FAFF/1976D2?text=Science+Camp"
+          alt="Science Camp"
+          class="w-full
+                 h-52
+                 object-cover">
+
+        <div class="p-6">
+
+          <span
+            class="text-sm
+                   font-bold
+                   text-blue-600">
+
+            🔬 PROJECT 02
+
+          </span>
+
+          <h3
+            class="text-xl
+                   font-bold
+                   text-[#12345B]
+                   mt-2">
+
+            ค่ายวิทยาศาสตร์
+
+          </h3>
+
+          <p
+            class="text-gray-600
+                   mt-3
+                   text-sm
+                   leading-7">
+
+            เข้าร่วมกิจกรรมการทดลอง
+            และเรียนรู้กระบวนการทางวิทยาศาสตร์
+
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROJECT 3 -->
+
+      <article
+        class="project-card
+               bg-white
+               rounded-3xl
+               overflow-hidden
+               border
+               border-blue-100
+               shadow-soft">
+
+        <img
+          src="https://placehold.co/600x400/E8F8FF/1976D2?text=Biology"
+          alt="Biology Project"
+          class="w-full
+                 h-52
+                 object-cover">
+
+        <div class="p-6">
+
+          <span
+            class="text-sm
+                   font-bold
+                   text-blue-600">
+
+            🧬 PROJECT 03
+
+          </span>
+
+          <h3
+            class="text-xl
+                   font-bold
+                   text-[#12345B]
+                   mt-2">
+
+            โครงงานชีววิทยา
+
+          </h3>
+
+          <p
+            class="text-gray-600
+                   mt-3
+                   text-sm
+                   leading-7">
+
+            ค้นคว้าเกี่ยวกับสิ่งมีชีวิต
+            และนำเสนอผลการศึกษา
+
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROJECT 4 -->
+
+      <article
+        class="project-card
+               bg-white
+               rounded-3xl
+               overflow-hidden
+               border
+               border-blue-100
+               shadow-soft">
+
+        <img
+          src="https://placehold.co/600x400/EAF7FF/1976D2?text=Health"
+          alt="Health Activity"
+          class="w-full
+                 h-52
+                 object-cover">
+
+        <div class="p-6">
+
+          <span
+            class="text-sm
+                   font-bold
+                   text-blue-600">
+
+            🩺 PROJECT 04
+
+          </span>
+
+          <h3
+            class="text-xl
+                   font-bold
+                   text-[#12345B]
+                   mt-2">
+
+            กิจกรรมส่งเสริมสุขภาพ
+
+          </h3>
+
+          <p
+            class="text-gray-600
+                   mt-3
+                   text-sm
+                   leading-7">
+
+            เรียนรู้เกี่ยวกับการดูแลสุขภาพ
+            และการป้องกันโรค
+
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROJECT 5 -->
+
+      <article
+        class="project-card
+               bg-white
+               rounded-3xl
+               overflow-hidden
+               border
+               border-blue-100
+               shadow-soft">
+
+        <img
+          src="https://placehold.co/600x400/F0FAFF/1976D2?text=Mathematics"
+          alt="Mathematics"
+          class="w-full
+                 h-52
+                 object-cover">
+
+        <div class="p-6">
+
+          <span
+            class="text-sm
+                   font-bold
+                   text-blue-600">
+
+            🧮 PROJECT 05
+
+          </span>
+
+          <h3
+            class="text-xl
+                   font-bold
+                   text-[#12345B]
+                   mt-2">
+
+            กิจกรรมคณิตศาสตร์
+
+          </h3>
+
+          <p
+            class="text-gray-600
+                   mt-3
+                   text-sm
+                   leading-7">
+
+            ฝึกคิดวิเคราะห์และแก้โจทย์ปัญหา
+            ทางคณิตศาสตร์
+
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROJECT 6 -->
+
+      <article
+        class="project-card
+               bg-white
+               rounded-3xl
+               overflow-hidden
+               border
+               border-blue-100
+               shadow-soft">
+
+        <img
+          src="https://placehold.co/600x400/E8F8FF/1976D2?text=Volunteer"
+          alt="Volunteer"
+          class="w-full
+                 h-52
+                 object-cover">
+
+        <div class="p-6">
+
+          <span
+            class="text-sm
+                   font-bold
+                   text-blue-600">
+
+            💙 PROJECT 06
+
+          </span>
+
+          <h3
+            class="text-xl
+                   font-bold
+                   text-[#12345B]
+                   mt-2">
+
+            กิจกรรมจิตอาสา
+
+          </h3>
+
+          <p
+            class="text-gray-600
+                   mt-3
+                   text-sm
+                   leading-7">
+
+            ร่วมกิจกรรมเพื่อช่วยเหลือ
+            โรงเรียนและชุมชน
+
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROJECT 7 -->
+
+      <article
+        class="project-card
+               bg-white
+               rounded-3xl
+               overflow-hidden
+               border
+               border-blue-100
+               shadow-soft">
+
+        <img
+          src="https://placehold.co/600x400/EAF7FF/1976D2?text=Competition"
+          alt="Competition"
+          class="w-full
+                 h-52
+                 object-cover">
+
+        <div class="p-6">
+
+          <span
+            class="text-sm
+                   font-bold
+                   text-blue-600">
+
+            🏆 PROJECT 07
+
+          </span>
+
+          <h3
+            class="text-xl
+                   font-bold
+                   text-[#12345B]
+                   mt-2">
+
+            การแข่งขันทางวิชาการ
+
+          </h3>
+
+          <p
+            class="text-gray-600
+                   mt-3
+                   text-sm
+                   leading-7">
+
+            เข้าร่วมการแข่งขันเพื่อพัฒนา
+            ทักษะและประสบการณ์
+
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROJECT 8 -->
+
+      <article
+        class="project-card
+               bg-white
+               rounded-3xl
+               overflow-hidden
+               border
+               border-blue-100
+               shadow-soft">
+
+        <img
+          src="https://placehold.co/600x400/F0FAFF/1976D2?text=Presentation"
+          alt="Presentation"
+          class="w-full
+                 h-52
+                 object-cover">
+
+        <div class="p-6">
+
+          <span
+            class="text-sm
+                   font-bold
+                   text-blue-600">
+
+            🎤 PROJECT 08
+
+          </span>
+
+          <h3
+            class="text-xl
+                   font-bold
+                   text-[#12345B]
+                   mt-2">
+
+            การนำเสนอผลงาน
+
+          </h3>
+
+          <p
+            class="text-gray-600
+                   mt-3
+                   text-sm
+                   leading-7">
+
+            ฝึกการสื่อสารและนำเสนอข้อมูล
+            อย่างเป็นระบบ
+
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROJECT 9 -->
+
+      <article
+        class="project-card
+               bg-white
+               rounded-3xl
+               overflow-hidden
+               border
+               border-blue-100
+               shadow-soft">
+
+        <img
+          src="https://placehold.co/600x400/E8F8FF/1976D2?text=Technology"
+          alt="Technology"
+          class="w-full
+                 h-52
+                 object-cover">
+
+        <div class="p-6">
+
+          <span
+            class="text-sm
+                   font-bold
+                   text-blue-600">
+
+            💻 PROJECT 09
+
+          </span>
+
+          <h3
+            class="text-xl
+                   font-bold
+                   text-[#12345B]
+                   mt-2">
+
+            เทคโนโลยีและการเขียนโปรแกรม
+
+          </h3>
+
+          <p
+            class="text-gray-600
+                   mt-3
+                   text-sm
+                   leading-7">
+
+            เรียนรู้การใช้เทคโนโลยี
+            และพัฒนาทักษะดิจิทัล
+
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROJECT 10 -->
+
+      <article
+        class="project-card
+               bg-white
+               rounded-3xl
+               overflow-hidden
+               border
+               border-blue-100
+               shadow-soft">
+
+        <img
+          src="https://placehold.co/600x400/EAF7FF/1976D2?text=Achievement"
+          alt="Achievement"
+          class="w-full
+                 h-52
+                 object-cover">
+
+        <div class="p-6">
+
+          <span
+            class="text-sm
+                   font-bold
+                   text-blue-600">
+
+            ⭐ PROJECT 10
+
+          </span>
+
+          <h3
+            class="text-xl
+                   font-bold
+                   text-[#12345B]
+                   mt-2">
+
+            ผลงานและความภาคภูมิใจ
+
+          </h3>
+
+          <p
+            class="text-gray-600
+                   mt-3
+                   text-sm
+                   leading-7">
+
+            รวบรวมรางวัล ใบประกาศ
+            และความสำเร็จที่สำคัญ
+
+          </p>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT
+====================================================== -->
+
+<section
+  id="contact"
+  class="py-24
+         bg-[#EAF7FF]">
+
+
+  <div
+    class="max-w-5xl
+           mx-auto
+           px-5">
+
+
+    <div
+      class="bg-white
+             rounded-[35px]
+             p-8
+             sm:p-12
+             shadow-blue
+             border
+             border-blue-100
+             text-center
+             relative
+             overflow-hidden">
+
+
+      <!-- STICKERS -->
+
+      <div
+        class="absolute
+               top-5
+               left-5
+               text-3xl">
+
+        🧬
+
+      </div>
+
+      <div
+        class="absolute
+               bottom-5
+               right-5
+               text-3xl">
+
+        🩺
+
+      </div>
+
+
+      <span
+        class="text-blue-600
+               font-bold">
+
+        CONTACT ME
+
+      </span>
+
+
+      <h2
+        class="text-3xl
+               sm:text-4xl
+               font-extrabold
+               text-[#12345B]
+               mt-3">
+
+        ติดต่อฉัน 💌
+
+      </h2>
+
+
+      <p
+        class="text-gray-600
+               mt-5">
+
+        หากต้องการสอบถามข้อมูลเพิ่มเติม
+        สามารถติดต่อได้ตามช่องทางด้านล่าง
+
+      </p>
+
+
+      <div
+        class="grid
+               sm:grid-cols-3
+               gap-5
+               mt-10">
+
+
+        <!-- EMAIL -->
+
+        <div
+          class="p-5
+                 bg-blue-50
+                 rounded-2xl">
+
+          <div class="text-3xl">
+            📧
+          </div>
+
+          <p
+            class="font-bold
+                   text-[#12345B]
+                   mt-2">
+
+            Email
+
+          </p>
+
+          <p
+            class="text-sm
+                   text-gray-600
+                   mt-1">
+
+            example@email.com
+
+          </p>
+
+        </div>
+
+
+        <!-- PHONE -->
+
+        <div
+          class="p-5
+                 bg-cyan-50
+                 rounded-2xl">
+
+          <div class="text-3xl">
+            📱
+          </div>
+
+          <p
+            class="font-bold
+                   text-[#12345B]
+                   mt-2">
+
+            Phone
+
+          </p>
+
+          <p
+            class="text-sm
+                   text-gray-600
+                   mt-1">
+
+            08X-XXX-XXXX
+
+          </p>
+
+        </div>
+
+
+        <!-- SOCIAL -->
+
+        <div
+          class="p-5
+                 bg-blue-50
+                 rounded-2xl">
+
+          <div class="text-3xl">
+            💻
+          </div>
+
+          <p
+            class="font-bold
+                   text-[#12345B]
+                   mt-2">
+
+            Social
+
+          </p>
+
+          <p
+            class="text-sm
+                   text-gray-600
+                   mt-1">
+
+            Facebook / Instagram
+
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer
+  class="bg-[#12345B]
+         py-8">
+
+
+  <div
+    class="max-w-6xl
+           mx-auto
+           px-5
+           text-center">
+
+
+    <div
+      class="text-3xl
+             mb-3">
+
+      🩺 🧬 🔬 💙
+
+    </div>
+
+
+    <h3
+      class="text-white
+             font-bold
+             text-lg">
+
+      ชลิตา ศรีบรรเทา
+
+    </h3>
+
+
+    <p
+      class="text-blue-100
+             text-sm
+             mt-2">
+
+      Portfolio สำหรับการศึกษาต่อ
+
+    </p>
+
+
+    <p
+      class="text-blue-200
+             text-sm
+             mt-1">
+
+      โรงเรียนมหิดลวิทยานุสรณ์
+
+    </p>
+
+
+    <p
+      class="text-blue-200
+             text-xs
+             mt-5">
+
+      © 2026 ชลิตา ศรีบรรเทา. All Rights Reserved.
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+  /* ==========================================
+     MOBILE MENU
+  ========================================== */
+
+  const menuBtn =
+    document.getElementById("menuBtn");
+
+  const mobileMenu =
+    document.getElementById("mobileMenu");
+
+
+  menuBtn.addEventListener("click", () => {
+
+    mobileMenu.classList.toggle("hidden");
+
+  });
+
+
+  /* ==========================================
+     CLOSE MENU
+  ========================================== */
+
+  const mobileLinks =
+    document.querySelectorAll(".mobile-link");
+
+
+  mobileLinks.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+      mobileMenu.classList.add("hidden");
+
+    });
+
+  });
+
+
+  /* ==========================================
+     PROJECT CARD ANIMATION
+  ========================================== */
+
+  const cards =
+    document.querySelectorAll(".project-card");
+
+
+  const observer =
+    new IntersectionObserver(
+
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.style.opacity = "1";
+
+            entry.target.style.transform =
+              "translateY(0)";
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold: 0.1
+      }
+
+    );
+
+
+  cards.forEach(card => {
+
+    card.style.opacity = "0";
+
+    card.style.transform =
+      "translateY(25px)";
+
+    card.style.transition =
+      "all 0.6s ease";
+
+    observer.observe(card);
+
+  });
+
+</script>
+
+</body>
+</html>
